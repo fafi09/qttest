@@ -17,10 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
+    mybuttonmemnoleak.cpp \
     subwidget.cpp \
     widget.cpp
 
 HEADERS += \
+    mybuttonmemnoleak.h \
     subwidget.h \
     widget.h
 

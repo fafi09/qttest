@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include "subwidget.h"
 #include <QDebug>
+#include "mybuttonmemnoleak.h"
 
 class Widget : public QWidget
 {

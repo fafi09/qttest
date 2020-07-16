@@ -94,6 +94,13 @@ Widget::Widget(QWidget *parent)
         qDebug()<<a<<b;
         qDebug()<<isCheck;
     });
+
+    //测试控件是否需要手动的内存管理
+    //1）指定父对象后 2）直接或间接继承于QObject
+    //子对象如果是动态分配空间的new，不需要手动释放delete，系统会自动释放
+    MyButtonMemNoLeak *btnLeak = new MyButtonMemNoLeak(this);
+    btnLeak->setText("btnNoleak");
+    btnLeak->move(300,100);
 }
 
 void Widget::dealSlot(int i, QString str)
